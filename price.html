@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PDXN1YW9W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1PDXN1YW9W');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitcoin Price Today (Live) | WhoInventedBitcoin.com</title>
+  <meta name="description" content="Live Bitcoin price today in USD — current BTC price, 24-hour change, market cap, and volume. Updated in real time.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="scan-lines"></div>
+  <div class="grid-overlay"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">₿ WhoInventedBitcoin<span>.com</span></a>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="satoshi.html">Satoshi</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="whitepaper.html">Whitepaper</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="price.html" class="nav-price active">BTC Price</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero" data-bg="PRICE">
+    <div class="container">
+      <p class="eyebrow">Live Market Data</p>
+      <h1>Bitcoin <span>Price Today</span></h1>
+      <p class="lead">The live price of Bitcoin (BTC) in US dollars, with real-time market data including 24-hour change, market capitalization, and trading volume.</p>
+    </div>
+  </div>
+
+  <div class="ad-slot ad-horizontal"><span>Advertisement</span></div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- LIVE PRICE WIDGET -->
+      <div class="price-widget" id="price-widget">
+        <p class="price-label">Bitcoin (BTC) / USD</p>
+        <div class="price-value" id="btc-price"><span class="price-loading">Loading...</span></div>
+        <div class="price-change" id="btc-change"></div>
+        <div class="price-meta" id="price-meta"></div>
+        <p style="font-family:var(--font-mono); font-size:0.72rem; color:var(--text-muted); margin-top:2rem;" id="price-updated"></p>
+      </div>
+
+      <div class="ad-slot ad-horizontal" style="margin:2rem 0;"><span>Advertisement</span></div>
+
+      <!-- HISTORICAL HIGHS TABLE -->
+      <div class="section-header" style="margin-top:3rem;">
+        <span class="section-tag">Historical Context</span>
+        <h2>Bitcoin All-Time Highs</h2>
+        <p>How Bitcoin's price has evolved across each major bull cycle.</p>
+      </div>
+      <div style="overflow-x:auto; border:1px solid var(--border); border-radius:6px;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Approximate Peak Price</th>
+              <th>Key Event</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>2011</td><td>~$31</td><td>First mainstream media coverage</td></tr>
+            <tr><td>2013</td><td>~$1,150</td><td>Silk Road shutdown & Chinese exchange boom</td></tr>
+            <tr><td>2017</td><td>~$19,800</td><td>Retail speculation & ICO boom; CME futures launch</td></tr>
+            <tr><td>2021</td><td>~$69,000</td><td>Institutional adoption (Tesla, MicroStrategy); NFT mania</td></tr>
+            <tr><td>2024</td><td>~$73,000+</td><td>US Spot Bitcoin ETF approval; fourth halving</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ad-slot ad-horizontal" style="margin:2rem 0;"><span>Advertisement</span></div>
+
+      <!-- ABOUT BITCOIN PRICING -->
+      <div class="section-header" style="margin-top:3rem;">
+        <span class="section-tag">How Bitcoin Pricing Works</span>
+        <h2>What Determines Bitcoin's Price?</h2>
+      </div>
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-num">S&D</span>
+          <h4>Supply and Demand</h4>
+          <p>Like any asset, Bitcoin's price is determined by how many buyers and sellers exist at any given time. Bitcoin's capped supply of 21 million coins means demand increases alone can drive price significantly.</p>
+        </div>
+        <div class="fact-item">
+          <span class="fact-num">⚡</span>
+          <h4>Halvings</h4>
+          <p>Every ~4 years, the rate of new Bitcoin creation is cut in half. This supply reduction has historically preceded significant price increases as demand outpaces new issuance.</p>
+        </div>
+        <div class="fact-item">
+          <span class="fact-num">🏦</span>
+          <h4>Institutional Flows</h4>
+          <p>Large purchases or sales by institutional investors — corporations, hedge funds, ETF providers — can have outsized impact on Bitcoin's price given its relatively limited liquidity compared to traditional markets.</p>
+        </div>
+        <div class="fact-item">
+          <span class="fact-num"><i class="fa-solid fa-scale-balanced"></i></span>
+          <h4>Regulation</h4>
+          <p>Government announcements about Bitcoin regulation — bans, ETF approvals, tax guidance — have historically caused significant short-term price movements in either direction.</p>
+        </div>
+        <div class="fact-item">
+          <span class="fact-num">📰</span>
+          <h4>Sentiment & Media</h4>
+          <p>Bitcoin is sensitive to news cycles. Positive developments (major company adoption, celebrity endorsements, favorable regulations) tend to drive price up; negative news (exchange hacks, regulatory crackdowns) drives it down.</p>
+        </div>
+        <div class="fact-item">
+          <span class="fact-num">🌍</span>
+          <h4>Macro Economy</h4>
+          <p>Bitcoin increasingly correlates with broader risk assets. Inflation fears, interest rate decisions, currency crises, and geopolitical instability can all influence Bitcoin's price as investors seek alternative stores of value.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:2rem; padding:1.5rem; background:var(--bg-card); border:1px solid var(--border); border-radius:6px; border-left:3px solid var(--orange);">
+        <p style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted); margin:0;">
+          ⚠️ <strong style="color:var(--text-primary);">Disclaimer:</strong> The price data on this page is provided for informational purposes only. Nothing on this website constitutes financial, investment, or trading advice. Bitcoin is a highly volatile speculative asset. Always conduct your own research and consult a qualified financial advisor before making any investment decisions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="ad-slot ad-horizontal"><span>Advertisement</span></div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">₿ WhoInventedBitcoin<span>.com</span></a>
+          <p>An independent educational resource dedicated to documenting the history and mystery of Bitcoin's creation.</p>
+        </div>
+        <div class="footer-links">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="satoshi.html">Who is Satoshi?</a></li>
+            <li><a href="timeline.html">Bitcoin Timeline</a></li>
+            <li><a href="whitepaper.html">The Whitepaper</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="/blog/">Blog</a></li>
+      <li><a href="news.html">News</a></li>
+            <li><a href="price.html">BTC Price</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-disclaimer">
+          <h5>Disclaimer</h5>
+          <p>This site is for educational purposes only. Nothing here constitutes financial advice.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 WhoInventedBitcoin.com — Educational Resource</p>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+  <script>
+    async function loadPrice() {
+      try {
+        const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin');
+        const [data] = await res.json();
+        const fmt = n => '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+        const fmtBig = n => {
+          if (n >= 1e12) return '$' + (n/1e12).toFixed(2) + 'T';
+          if (n >= 1e9) return '$' + (n/1e9).toFixed(2) + 'B';
+          return '$' + n.toLocaleString();
+        };
+        document.getElementById('btc-price').textContent = fmt(data.current_price);
+        const chg = data.price_change_percentage_24h;
+        const chgEl = document.getElementById('btc-change');
+        chgEl.textContent = (chg >= 0 ? '▲ +' : '▼ ') + chg.toFixed(2) + '% (24h)';
+        chgEl.className = 'price-change ' + (chg >= 0 ? 'positive' : 'negative');
+        document.getElementById('price-meta').innerHTML = `
+          <div class="price-meta-item"><span class="meta-label">Market Cap</span><span class="meta-val">${fmtBig(data.market_cap)}</span></div>
+          <div class="price-meta-item"><span class="meta-label">24h Volume</span><span class="meta-val">${fmtBig(data.total_volume)}</span></div>
+          <div class="price-meta-item"><span class="meta-label">24h High</span><span class="meta-val">${fmt(data.high_24h)}</span></div>
+          <div class="price-meta-item"><span class="meta-label">24h Low</span><span class="meta-val">${fmt(data.low_24h)}</span></div>
+          <div class="price-meta-item"><span class="meta-label">All-Time High</span><span class="meta-val">${fmt(data.ath)}</span></div>
+          <div class="price-meta-item"><span class="meta-label">Circulating Supply</span><span class="meta-val">${(data.circulating_supply/1e6).toFixed(2)}M BTC</span></div>
+        `;
+        document.getElementById('price-updated').textContent = 'Last updated: ' + new Date().toLocaleTimeString();
+        // Auto-refresh every 60 seconds
+        setTimeout(loadPrice, 60000);
+      } catch(e) {
+        document.getElementById('btc-price').innerHTML = '<span style="font-size:1.5rem; color:var(--text-muted)">Price unavailable — please try again later</span>';
+        document.getElementById('price-updated').textContent = 'Could not fetch live price. Data provided by CoinGecko.';
+      }
+    }
+    loadPrice();
+  </script>
+<!-- =====================================================
+     BLOG WIDGET — paste this into any page just before </body>
+     It will show the 3 latest blog posts automatically.
+     ===================================================== -->
+
+<!-- LATEST BLOG POSTS SECTION -->
+<section class="section section--dark" id="blog-widget-section" style="display:none;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">From The Blog</span>
+      <h2>Latest Articles</h2>
+      <p>Deep dives into Bitcoin history, Satoshi's mystery, and the world of cryptocurrency.</p>
+    </div>
+    <div class="card-grid" id="blog-widget-grid"></div>
+    <div style="text-align:center; margin-top:2.5rem;">
+      <a href="/blog/" class="btn-ghost">View All Posts <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<script>
+(async function() {
+  try {
+    const res   = await fetch('/blog/api.php?limit=3');
+    const data  = await res.json();
+    const posts = data.posts || [];
+    if (!posts.length) return;
+
+    const grid = document.getElementById('blog-widget-grid');
+    grid.innerHTML = posts.map(p => `
+      <a href="/blog/${p.slug}" class="card">
+        <div class="card-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+        <h3>${escHtml(p.title)}</h3>
+        ${p.excerpt ? `<p>${escHtml(p.excerpt.substring(0, 120))}…</p>` : ''}
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1.2rem;">
+          <span class="card-link">Read Article →</span>
+          <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted);">${formatDate(p.published_at)}</span>
+        </div>
+      </a>
+    `).join('');
+
+    document.getElementById('blog-widget-section').style.display = 'block';
+  } catch(e) {}
+
+  function escHtml(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function formatDate(d) {
+    return new Date(d).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PDXN1YW9W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1PDXN1YW9W');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latest Bitcoin News | WhoInventedBitcoin.com</title>
+  <meta name="description" content="Stay up to date with the latest Bitcoin news — from price milestones and regulatory developments to new discoveries about Satoshi Nakamoto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="scan-lines"></div>
+  <div class="grid-overlay"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">₿ WhoInventedBitcoin<span>.com</span></a>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="satoshi.html">Satoshi</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="whitepaper.html">Whitepaper</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="news.html" class="active">News</a></li>
+      <li><a href="price.html" class="nav-price">BTC Price</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero" data-bg="NEWS">
+    <div class="container">
+      <p class="eyebrow">Latest Developments</p>
+      <h1>Bitcoin <span>News</span></h1>
+      <p class="lead">The latest headlines on Bitcoin — market movements, regulatory news, institutional adoption, and any new developments in the ongoing mystery of Satoshi Nakamoto's identity.</p>
+    </div>
+  </div>
+
+  <div class="ad-slot ad-horizontal"><span>Advertisement</span></div>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-with-sidebar">
+        <div>
+          <div class="section-header" style="text-align:left; margin-bottom:1.5rem;">
+            <span class="section-tag">Latest Stories</span>
+            <p style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted); margin-top:0.5rem;" id="news-timestamp">Loading latest news...</p>
+          </div>
+
+          <div id="news-container">
+            <div class="news-loading">
+              <p>⏳ Fetching latest Bitcoin headlines...</p>
+            </div>
+          </div>
+
+          <div class="ad-slot ad-horizontal" style="margin:2rem 0;"><span>Advertisement</span></div>
+
+          <!-- Fallback static news for SEO / when JS is disabled -->
+          <noscript>
+            <div class="news-grid">
+              <div class="news-card">
+                <div class="news-source">Reuters</div>
+                <h3>Bitcoin ETFs Record Billions in Inflows Since US Approval</h3>
+                <p>Spot Bitcoin ETFs launched by BlackRock, Fidelity, and others have attracted tens of billions of dollars in investor capital since receiving SEC approval in January 2024.</p>
+                <div class="news-date">2025</div>
+              </div>
+              <div class="news-card">
+                <div class="news-source">CoinDesk</div>
+                <h3>The Fourth Halving Reduces Bitcoin Mining Reward to 3.125 BTC</h3>
+                <p>Bitcoin completed its fourth halving event in April 2024, reducing the block reward from 6.25 BTC to 3.125 BTC. The event enforces Bitcoin's hard cap of 21 million coins.</p>
+                <div class="news-date">2024</div>
+              </div>
+              <div class="news-card">
+                <div class="news-source">BBC</div>
+                <h3>UK Court Rules Craig Wright Is Not Satoshi Nakamoto</h3>
+                <p>A UK High Court judge ruled in 2024 that Craig Wright — who has publicly claimed to be Bitcoin's creator — did not write the Bitcoin whitepaper and is not Satoshi Nakamoto.</p>
+                <div class="news-date">2024</div>
+              </div>
+            </div>
+          </noscript>
+
+          <div class="section-header" style="text-align:left; margin-top:3rem; margin-bottom:1.5rem;">
+            <span class="section-tag">Topics We Cover</span>
+          </div>
+          <div class="facts-grid">
+            <div class="fact-item">
+              <span class="fact-num">₿</span>
+              <h4>Bitcoin Price</h4>
+              <p>Market milestones, all-time highs, major corrections, and analysis of price-driving events.</p>
+            </div>
+            <div class="fact-item">
+              <span class="fact-num"><i class="fa-solid fa-scale-balanced"></i></span>
+              <h4>Regulation</h4>
+              <p>Government actions, ETF approvals, legal rulings, and policy changes affecting Bitcoin worldwide.</p>
+            </div>
+            <div class="fact-item">
+              <span class="fact-num">🏦</span>
+              <h4>Institutional Adoption</h4>
+              <p>Corporate treasury purchases, ETF launches, banking products, and mainstream financial integration.</p>
+            </div>
+            <div class="fact-item">
+              <span class="fact-num">🔍</span>
+              <h4>Satoshi Investigations</h4>
+              <p>New theories, court cases, and research developments related to Bitcoin's anonymous creator.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sticky-sidebar">
+          <div class="sidebar-nav">
+            <h5>Topics</h5>
+            <ul>
+              <li><a href="#">BTC Price</a></li>
+              <li><a href="#">Regulation</a></li>
+              <li><a href="#">Institutional</a></li>
+              <li><a href="#">Satoshi News</a></li>
+              <li><a href="#">Technology</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-ad">
+            <span>Advertisement</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ad-slot ad-horizontal"><span>Advertisement</span></div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">₿ WhoInventedBitcoin<span>.com</span></a>
+          <p>An independent educational resource dedicated to documenting the history and mystery of Bitcoin's creation.</p>
+        </div>
+        <div class="footer-links">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="satoshi.html">Who is Satoshi?</a></li>
+            <li><a href="timeline.html">Bitcoin Timeline</a></li>
+            <li><a href="whitepaper.html">The Whitepaper</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="/blog/">Blog</a></li>
+      <li><a href="news.html">News</a></li>
+            <li><a href="price.html">BTC Price</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-disclaimer">
+          <h5>Disclaimer</h5>
+          <p>This site is for educational purposes only. Nothing here constitutes financial advice.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 WhoInventedBitcoin.com — Educational Resource</p>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+  <script>
+    // Fetch live Bitcoin news via CoinGecko news feed
+    async function loadNews() {
+      const container = document.getElementById('news-container');
+      const timestamp = document.getElementById('news-timestamp');
+      try {
+        const res = await fetch('https://api.coingecko.com/api/v3/news');
+        const data = await res.json();
+        const articles = (data.data || []).slice(0, 9);
+        if (!articles.length) throw new Error('No articles');
+        timestamp.textContent = 'Updated: ' + new Date().toLocaleString();
+        container.innerHTML = '<div class="news-grid">' + articles.map(a => `
+          <a class="news-card" href="${a.url}" target="_blank" rel="noopener" style="text-decoration:none;">
+            <div class="news-source">${a.author || 'Bitcoin News'}</div>
+            <h3>${a.title}</h3>
+            <p>${(a.description || '').substring(0, 140)}${a.description && a.description.length > 140 ? '...' : ''}</p>
+            <div class="news-date">${a.updated_at ? new Date(a.updated_at * 1000).toLocaleDateString() : ''}</div>
+          </a>`).join('') + '</div>';
+      } catch(e) {
+        // Fallback to static news
+        timestamp.textContent = 'Showing curated news';
+        container.innerHTML = `<div class="news-grid">
+          <div class="news-card">
+            <div class="news-source">Reuters</div>
+            <h3>Bitcoin ETFs Record Billions in Inflows Since US Approval</h3>
+            <p>Spot Bitcoin ETFs from BlackRock, Fidelity, and others have attracted tens of billions of dollars in investor capital since receiving SEC approval in January 2024.</p>
+            <div class="news-date">2025</div>
+          </div>
+          <div class="news-card">
+            <div class="news-source">CoinDesk</div>
+            <h3>Fourth Bitcoin Halving Reduces Block Reward to 3.125 BTC</h3>
+            <p>Bitcoin completed its fourth halving in April 2024, reducing the block reward and enforcing its hard cap of 21 million coins.</p>
+            <div class="news-date">April 2024</div>
+          </div>
+          <div class="news-card">
+            <div class="news-source">BBC</div>
+            <h3>UK Court Rules Craig Wright Is Not Satoshi Nakamoto</h3>
+            <p>A UK High Court ruled in 2024 that Craig Wright did not write the Bitcoin whitepaper and is not Bitcoin's creator.</p>
+            <div class="news-date">2024</div>
+          </div>
+          <div class="news-card">
+            <div class="news-source">Financial Times</div>
+            <h3>MicroStrategy Continues Accumulating Bitcoin for Corporate Treasury</h3>
+            <p>MicroStrategy has become the world's largest corporate holder of Bitcoin, with holdings representing a significant percentage of all mined supply.</p>
+            <div class="news-date">2025</div>
+          </div>
+          <div class="news-card">
+            <div class="news-source">The Block</div>
+            <h3>El Salvador's Bitcoin Experiment — Three Years In</h3>
+            <p>El Salvador was the first country to adopt Bitcoin as legal tender. Three years on, economists analyze the impact on the country's financial system and its citizens.</p>
+            <div class="news-date">2024</div>
+          </div>
+          <div class="news-card">
+            <div class="news-source">Wired</div>
+            <h3>The Satoshi Mystery: Why It Might Never Be Solved</h3>
+            <p>Decades of investigation by journalists, cryptographers, and researchers have failed to identify Bitcoin's creator. Here's why the trail has gone cold.</p>
+            <div class="news-date">2024</div>
+          </div>
+        </div>`;
+      }
+    }
+    loadNews();
+  </script>
+</body>
+</html>
