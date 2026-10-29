@@ -1,0 +1,11 @@
+.git/
+.github/
+.openai/
+.wrangler/
+node_modules/
+*.md
+wrangler.jsonc
+wrangler.toml
+package.json
+package-lock.json
+*.log
