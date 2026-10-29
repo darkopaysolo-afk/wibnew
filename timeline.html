@@ -39,9 +39,9 @@
 
   <div class="page-hero" data-bg="HISTORY">
     <div class="container">
-      <p class="eyebrow">From Whitepaper to World Reserve Asset</p>
+      <p class="eyebrow">From the whitepaper to wider adoption</p>
       <h1>Bitcoin <span>History Timeline</span></h1>
-      <p class="lead">Trace every major milestone in Bitcoin's journey — from an anonymous email to a cryptography mailing list, to legal tender in sovereign nations and a fixture in global financial markets.</p>
+      <p class="lead">Explore selected historical milestones, with expandable evidence for Bitcoin’s origins. This is a historical selection, not a live news feed.</p>
     </div>
   </div>
 
@@ -53,7 +53,7 @@
         <div>
           <div class="timeline">
 
-            <div class="timeline-item">
+            <div class="timeline-item" id="era-origins">
               <div class="timeline-date">OCTOBER 31, 2008</div>
               <h3>The Whitepaper Is Published</h3>
               <p>Satoshi Nakamoto emails a 9-page document — "Bitcoin: A Peer-to-Peer Electronic Cash System" — to the Cryptography Mailing List. It describes a system for electronic transactions that does not require trust in a central party, solving the double-spend problem using a proof-of-work blockchain.</p><details class="clue-details"><summary>Open the evidence</summary><p>Start with the document itself: its title page credits Satoshi, but supplies no verified real-world biography.</p><a href="https://bitcoin.org/bitcoin.pdf">Read the original whitepaper →</a></details>
@@ -89,16 +89,16 @@
               <p>The Mt. Gox exchange launches, quickly becoming the world's dominant Bitcoin trading platform. By 2013 it handles over 70% of all global Bitcoin transactions. Its later collapse in 2014 would become one of the most consequential events in crypto history.</p>
             </div>
 
+            <div class="timeline-item" id="era-growth">
+              <div class="timeline-date">FEBRUARY 2011</div>
+              <h3>Bitcoin Reaches $1 USD</h3>
+              <p>Bitcoin achieves parity with the US dollar for the first time, trading at $1 per BTC. This milestone, though modest by later standards, was a symbolic moment that attracted significant media and developer attention.</p>
+            </div>
+
             <div class="timeline-item">
               <div class="timeline-date">APRIL 2011</div>
               <h3>Satoshi Disappears</h3>
               <p>On April 23, 2011, Satoshi told Mike Hearn they had moved on and encouraged continued development. The message mentions Gavin, but was addressed to Hearn. It does not establish the reason for the departure. <a href="https://plan99.net/~mike/satoshi-emails/thread5.html">Read the published exchange.</a></p>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-date">FEBRUARY 2011</div>
-              <h3>Bitcoin Reaches $1 USD</h3>
-              <p>Bitcoin achieves parity with the US dollar for the first time, trading at $1 per BTC. This milestone, though modest by later standards, was a symbolic moment that attracted significant media and developer attention.</p>
             </div>
 
             <div class="timeline-item">
@@ -113,7 +113,7 @@
               <p>Bitcoin crosses $1,000 for the first time, driven partly by growing interest in China. The milestone attracts mainstream media coverage worldwide and a wave of new investors and developers into the ecosystem.</p>
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item" id="era-crisis">
               <div class="timeline-date">FEBRUARY 2014</div>
               <h3>Mt. Gox Collapses</h3>
               <p>Mt. Gox — then the world's largest Bitcoin exchange — suspends trading, files for bankruptcy, and announces that approximately 850,000 BTC (worth ~$450 million at the time) had been stolen through a years-long hack. The collapse devastates the market and shakes public confidence in Bitcoin exchanges.</p>
@@ -125,13 +125,13 @@
               <p>Vitalik Buterin's Ethereum network goes live, introducing programmable "smart contracts" to blockchain technology. Ethereum becomes the second-largest cryptocurrency by market cap and spawns an entirely new ecosystem of decentralized finance and applications.</p>
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item" id="era-cycles">
               <div class="timeline-date">DECEMBER 2017</div>
               <h3>Bitcoin Reaches ~$20,000</h3>
               <p>Bitcoin hits an all-time high of nearly $20,000 during a massive bull run fueled by retail speculation. Bitcoin futures begin trading on the Chicago Mercantile Exchange (CME), marking a milestone in institutional legitimacy. A dramatic correction follows in early 2018.</p>
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item" id="era-adoption">
               <div class="timeline-date">OCTOBER 2020</div>
               <h3>PayPal Adopts Bitcoin</h3>
               <p>PayPal announces support for buying, selling, and holding Bitcoin (and other cryptocurrencies) for its 346 million users worldwide. The announcement is seen as a major step toward mainstream financial adoption.</p>
@@ -144,15 +144,15 @@
             </div>
 
             <div class="timeline-item">
-              <div class="timeline-date">NOVEMBER 2021</div>
-              <h3>Bitcoin Reaches $69,000</h3>
-              <p>Bitcoin sets a new all-time high of approximately $69,000, driven by institutional adoption, ETF speculation, and macroeconomic inflation concerns. Total crypto market cap briefly exceeds $3 trillion.</p>
+              <div class="timeline-date">SEPTEMBER 2021</div>
+              <h3>El Salvador Makes Bitcoin Legal Tender</h3>
+              <p>El Salvador becomes the first country in the world to adopt Bitcoin as legal tender under President Nayib Bukele. This entry describes the 2021 adoption, rather than the country’s current payment rules. The move draws both praise and criticism from economists and international institutions.</p>
             </div>
 
             <div class="timeline-item">
-              <div class="timeline-date">SEPTEMBER 2021</div>
-              <h3>El Salvador Makes Bitcoin Legal Tender</h3>
-              <p>El Salvador becomes the first country in the world to adopt Bitcoin as legal tender under President Nayib Bukele. All businesses are required to accept Bitcoin for payments. The move draws both praise and criticism from economists and international institutions.</p>
+              <div class="timeline-date">NOVEMBER 2021</div>
+              <h3>Bitcoin Reaches $69,000</h3>
+              <p>Bitcoin sets a new all-time high of approximately $69,000, driven by institutional adoption, ETF speculation, and macroeconomic inflation concerns. Total crypto market cap briefly exceeds $3 trillion.</p>
             </div>
 
             <div class="timeline-item">
@@ -167,17 +167,20 @@
               <p>Bitcoin's fourth "halving" event reduces the block reward from 6.25 BTC to 3.125 BTC. Halvings occur roughly every four years and reduce the rate at which new Bitcoin is created, enforcing Bitcoin's hard cap of 21 million coins. Historically, halvings have preceded significant price appreciation.</p>
             </div>
 
+            <div class="timeline-item"><div class="timeline-date">MAY 20, 2024</div><h3>Court publishes its reasons in COPA v Wright</h3><p>The High Court of England and Wales determined that Craig Wright is not Satoshi Nakamoto. <a href="/people/craig-wright">Read the profile and original judgment.</a></p>
+            </div>
+
           </div>
         </div>
         <div class="sticky-sidebar">
           <div class="sidebar-nav">
             <h5>Jump To Era</h5>
             <ul>
-              <li><a href="#">2008–2010: Origins</a></li>
-              <li><a href="#">2011–2013: Early Growth</a></li>
-              <li><a href="#">2014–2016: Dark Times</a></li>
-              <li><a href="#">2017–2019: Bull & Bear</a></li>
-              <li><a href="#">2020–2024: Institutional</a></li>
+              <li><a href="#era-origins">2008–2010: Origins</a></li>
+              <li><a href="#era-growth">2011–2013: Early Growth</a></li>
+              <li><a href="#era-crisis">2014–2016: Dark Times</a></li>
+              <li><a href="#era-cycles">2017–2019: Bull & Bear</a></li>
+              <li><a href="#era-adoption">2020–2024: Institutional</a></li>
             </ul>
           </div>
           <div class="sidebar-ad">
