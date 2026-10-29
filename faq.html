@@ -52,7 +52,7 @@
       <div class="content-with-sidebar">
         <div>
           <div class="section-header" style="text-align:left; margin-bottom:2rem;">
-            <span class="section-tag">About Satoshi & Bitcoin's Origin</span>
+            <span class="section-tag" id="about-satoshi">About Satoshi & Bitcoin's Origin</span>
           </div>
 
           <div class="faq-item">
@@ -100,7 +100,7 @@
           <div class="ad-slot ad-horizontal" style="margin:2rem 0;"><span>Advertisement</span></div>
 
           <div class="section-header" style="text-align:left; margin:2.5rem 0 1.5rem;">
-            <span class="section-tag">About Bitcoin Itself</span>
+            <span class="section-tag" id="about-bitcoin">About Bitcoin Itself</span>
           </div>
 
           <div class="faq-item">
@@ -114,7 +114,7 @@
 
           <div class="faq-item">
             <button class="faq-question" onclick="toggleFaq(this)">
-              What problem did Bitcoin solve? <i class="faq-chevron">▼</i>
+              <span id="how-it-works">What problem did Bitcoin solve?</span> <i class="faq-chevron">▼</i>
             </button>
             <div class="faq-answer">
               <p>Bitcoin solved the "double-spend problem" for digital currency — how to prevent someone from spending the same digital coin twice without a central authority to verify transactions. Previous digital cash systems required a trusted bank or intermediary. Bitcoin solved this using a distributed ledger (blockchain) and a proof-of-work consensus mechanism, meaning no single entity needs to be trusted because the rules are enforced by mathematics and the collective network.</p>
@@ -159,7 +159,7 @@
 
           <div class="faq-item">
             <button class="faq-question" onclick="toggleFaq(this)">
-              Is Bitcoin legal? <i class="faq-chevron">▼</i>
+              <span id="legal">Is Bitcoin legal?</span> <i class="faq-chevron">▼</i>
             </button>
             <div class="faq-answer"><p>Rules differ by jurisdiction and can change. Ownership, trading, payments, business licensing, and taxation are separate questions. Consult current official sources for your country; this historical resource does not maintain a legal-status tracker.</p>
             </div>
@@ -180,10 +180,10 @@
           <div class="sidebar-nav">
             <h5>Categories</h5>
             <ul>
-              <li><a href="#">About Satoshi</a></li>
-              <li><a href="#">About Bitcoin</a></li>
-              <li><a href="#">How It Works</a></li>
-              <li><a href="#">Legal & Tax</a></li>
+              <li><a href="#about-satoshi">About Satoshi</a></li>
+              <li><a href="#about-bitcoin">About Bitcoin</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#legal">Legal & Tax</a></li>
             </ul>
           </div>
           <div class="sidebar-ad">
