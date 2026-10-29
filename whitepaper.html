@@ -15,25 +15,25 @@
   <meta name="description" content="A plain-English breakdown of Satoshi Nakamoto's Bitcoin whitepaper — the 9-page document that launched a trillion-dollar financial revolution.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+<link rel="canonical" href="https://www.whoinventedbitcoin.com/whitepaper"><meta property="og:url" content="https://www.whoinventedbitcoin.com/whitepaper"><meta property="og:title" content="The Bitcoin Whitepaper Explained | WhoInventedBitcoin.com"><meta property="og:description" content="A plain-English breakdown of Satoshi Nakamoto's Bitcoin whitepaper — the 9-page document that launched a trillion-dollar financial revolution."><meta name="twitter:card" content="summary"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "The Bitcoin Whitepaper Explained | WhoInventedBitcoin.com", "url": "https://www.whoinventedbitcoin.com/whitepaper"}</script></head>
 <body>
   <div class="scan-lines"></div>
   <div class="grid-overlay"></div>
 
   <nav class="navbar">
-    <a href="index.html" class="logo">₿ WhoInventedBitcoin<span>.com</span></a>
-    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    <a href="/" class="logo">₿ WhoInventedBitcoin<span>.com</span></a>
+    <button class="hamburger" aria-label="Open navigation" aria-controls="navLinks" aria-expanded="false" onclick="toggleMenu()">&#9776;</button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="satoshi.html">Satoshi</a></li>
-      <li><a href="timeline.html">Timeline</a></li>
-      <li><a href="whitepaper.html" class="active">Whitepaper</a></li>
-      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/satoshi">Satoshi</a></li>
+      <li><a href="/timeline">Timeline</a></li>
+      <li><a href="/whitepaper" class="active">Whitepaper</a></li>
+      <li><a href="/faq">FAQ</a></li>
       <li><a href="/blog/">Blog</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="price.html" class="nav-price">BTC Price</a></li>
+      <li><a href="/news">News</a></li>
+      <li><a href="/price" class="nav-price">BTC Price</a></li>
     </ul>
   </nav>
 
@@ -59,67 +59,67 @@
           <!-- Section by section -->
           <div class="wp-section">
             <span class="wp-number">ABSTRACT</span>
-            <h3>The Core Idea</h3>
+            <h3 id="section-1">The Core Idea</h3>
             <p>The paper opens by identifying a fundamental problem: online payments require financial institutions to act as trusted third parties. This means fees, the possibility of reversed transactions, and an inherent reliance on trust. Satoshi proposes replacing this trust-based model with a cryptographic proof-based system — one where two parties can transact directly without needing a bank or payment processor in between. The system uses a peer-to-peer network to prevent "double spending" (spending the same digital coin twice).</p>
           </div>
 
           <div class="wp-section">
             <span class="wp-number">SECTION 1</span>
-            <h3>Introduction: The Problem with Digital Cash</h3>
+            <h3 id="section-2">Introduction: The Problem with Digital Cash</h3>
             <p>Before Bitcoin, every attempt at digital cash had a fundamental flaw: how do you prevent someone from copying a digital file and spending it twice? The traditional solution was to have a central authority (a bank or payment processor) keep a single authoritative ledger. But this creates a "trusted third party" — an institution that can fail, be hacked, charge fees, freeze accounts, or be coerced by governments. Satoshi's insight was that the trust problem could be solved using mathematics and a distributed network instead of a central authority.</p>
           </div>
 
           <div class="wp-section">
             <span class="wp-number">SECTION 2</span>
-            <h3>Transactions: What a Bitcoin Actually Is</h3>
+            <h3 id="section-3">Transactions: What a Bitcoin Actually Is</h3>
             <p>Satoshi defines a Bitcoin as a chain of digital signatures. When you own Bitcoin, you own a key that proves ownership. When you send Bitcoin to someone, you create a digital signature that says: "I, the current owner, transfer this to the next owner." This signature is cryptographically verifiable by anyone — but only the owner with the right private key can create it. The problem this doesn't yet solve: how do you prevent someone from signing the same coin to two different recipients at the same time? That's the double-spend problem.</p>
           </div>
 
           <div class="wp-section">
             <span class="wp-number">SECTION 3</span>
-            <h3>Timestamp Server: Creating a Public Record</h3>
+            <h3 id="section-4">Timestamp Server: Creating a Public Record</h3>
             <p>The solution begins with a timestamp server — a system that creates a permanent, publicly verifiable record of when each transaction occurred. By publishing a "hash" (a short cryptographic fingerprint) of a block of transactions, the network creates proof that those transactions existed at that time. Each new block includes the hash of the previous block, chaining them together in a sequence — hence the term "blockchain." This makes it impossible to alter any past transaction without changing every subsequent block.</p>
           </div>
 
           <div class="wp-section">
             <span class="wp-number">SECTION 4</span>
-            <h3>Proof-of-Work: The Mining Mechanism</h3>
+            <h3 id="section-5">Proof-of-Work: The Mining Mechanism</h3>
             <p>For the timestamp server to work without a central authority, the network needs a way to agree on a single valid version of history. Satoshi's solution is <strong>proof-of-work</strong> — a computational puzzle that nodes on the network (called miners) must solve to add a new block of transactions. The puzzle requires significant computational effort to solve but is trivial to verify once solved. The key insight: altering any past block would require redoing the proof-of-work for that block and all subsequent blocks — a computationally infeasible task as long as honest nodes control more than 50% of the network's computing power.</p>
           </div>
 
           <div class="wp-section">
             <span class="wp-number">SECTION 5</span>
-            <h3>The Network: How Bitcoin Nodes Operate</h3>
+            <h3 id="section-6">The Network: How Bitcoin Nodes Operate</h3>
             <p>Bitcoin runs on a peer-to-peer network of nodes. The steps are straightforward: new transactions are broadcast to all nodes; each node collects transactions into a block; each node works on finding the proof-of-work for its block; when a node finds a valid solution, it broadcasts the block to all other nodes; nodes accept the block if all transactions are valid and not already spent; nodes express acceptance by beginning work on the next block, using the accepted block's hash as the starting point. The longest chain — the one with the most accumulated proof-of-work — is always considered the valid one.</p>
           </div>
 
           <div class="wp-section">
             <span class="wp-number">SECTION 6</span>
-            <h3>Incentive: Why Would Anyone Mine?</h3>
+            <h3 id="section-7">Incentive: Why Would Anyone Mine?</h3>
             <p>Satoshi solves the incentive problem elegantly. The first transaction in every block is special: it creates a fixed amount of new Bitcoin and awards it to the miner who found the valid proof-of-work. This is the only mechanism by which new Bitcoin enters circulation. This "block reward" incentivizes miners to contribute honest computing power to the network. Over time, as the block reward diminishes (via "halvings" every ~4 years), transaction fees paid by users become the primary incentive for miners. Satoshi notes this system resembles gold mining — resources are expended to put new coins into circulation.</p>
           </div>
 
           <div class="wp-section">
             <span class="wp-number">SECTION 7</span>
-            <h3>Reclaiming Disk Space: Merkle Trees</h3>
+            <h3 id="section-8">Reclaiming Disk Space: Merkle Trees</h3>
             <p>As the blockchain grows, storing the full transaction history becomes burdensome. Satoshi proposes using "Merkle trees" — a data structure that allows old transaction data to be pruned while preserving the ability to verify that any transaction was included in a block. Only the block headers need to be kept indefinitely. This section showed Satoshi's concern for Bitcoin's long-term scalability even in the initial design.</p>
           </div>
 
           <div class="wp-section">
             <span class="wp-number">SECTION 8</span>
-            <h3>Simplified Payment Verification</h3>
+            <h3 id="section-9">Simplified Payment Verification</h3>
             <p>Full nodes store the entire blockchain. But most users don't need to run full nodes to verify payments. Satoshi describes a simplified payment verification (SPV) method that allows users to verify a payment by only downloading block headers — a much smaller dataset. By checking that a block header is in the longest chain and that a Merkle branch connects the transaction to that header, a user can verify a payment without trusting anyone. This is the basis for lightweight Bitcoin wallets used on smartphones today.</p>
           </div>
 
           <div class="wp-section">
             <span class="wp-number">SECTION 9 & 10</span>
-            <h3>Combining & Splitting Value; Privacy</h3>
+            <h3 id="section-10">Combining & Splitting Value; Privacy</h3>
             <p>Section 9 describes how Bitcoin handles different denominations — how inputs can be combined or split to make payments of any size, similar to physical cash. Section 10 addresses privacy: while all transactions are public, privacy is maintained by keeping public keys anonymous. Unlike traditional banking, where identity is linked to accounts, Bitcoin transactions are pseudonymous — visible to everyone but not directly tied to a real-world identity. Satoshi recommends using a new key pair for each transaction to enhance privacy.</p>
           </div>
 
           <div class="wp-section">
             <span class="wp-number">SECTION 11</span>
-            <h3>Calculations: The 51% Attack Math</h3>
+            <h3 id="section-11">Calculations: The 51% Attack Math</h3>
             <p>The final section provides the mathematical proof for why the network is secure. Satoshi shows that as long as honest nodes control more computing power than an attacker, the probability of a successful attack (rewriting history) decreases exponentially with each additional block confirmation. This section uses a Poisson distribution calculation to demonstrate that even an attacker with significant computational resources cannot realistically rewrite the blockchain once a transaction has several confirmations. This is the basis of the recommendation to wait for 6 confirmations for high-value transactions.</p>
           </div>
 
@@ -134,17 +134,17 @@
           <div class="sidebar-nav">
             <h5>Sections</h5>
             <ul>
-              <li><a href="#">Abstract</a></li>
-              <li><a href="#">1. Introduction</a></li>
-              <li><a href="#">2. Transactions</a></li>
-              <li><a href="#">3. Timestamp Server</a></li>
-              <li><a href="#">4. Proof-of-Work</a></li>
-              <li><a href="#">5. The Network</a></li>
-              <li><a href="#">6. Incentive</a></li>
-              <li><a href="#">7. Disk Space</a></li>
-              <li><a href="#">8. SPV</a></li>
-              <li><a href="#">9–10. Value & Privacy</a></li>
-              <li><a href="#">11. Calculations</a></li>
+              <li><a href="#section-1">Abstract</a></li>
+              <li><a href="#section-2">1. Introduction</a></li>
+              <li><a href="#section-3">2. Transactions</a></li>
+              <li><a href="#section-4">3. Timestamp Server</a></li>
+              <li><a href="#section-5">4. Proof-of-Work</a></li>
+              <li><a href="#section-6">5. The Network</a></li>
+              <li><a href="#section-7">6. Incentive</a></li>
+              <li><a href="#section-8">7. Disk Space</a></li>
+              <li><a href="#section-9">8. SPV</a></li>
+              <li><a href="#section-10">9–10. Value & Privacy</a></li>
+              <li><a href="#section-11">11. Calculations</a></li>
             </ul>
           </div>
           <div style="margin-bottom:1rem;">
@@ -164,26 +164,26 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">₿ WhoInventedBitcoin<span>.com</span></a>
+          <a href="/" class="logo">₿ WhoInventedBitcoin<span>.com</span></a>
           <p>An independent educational resource dedicated to documenting the history and mystery of Bitcoin's creation.</p>
         </div>
         <div class="footer-links">
           <h5>Explore</h5>
           <ul>
-            <li><a href="satoshi.html">Who is Satoshi?</a></li>
-            <li><a href="timeline.html">Bitcoin Timeline</a></li>
-            <li><a href="whitepaper.html">The Whitepaper</a></li>
-            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="/satoshi">Who is Satoshi?</a></li>
+            <li><a href="/timeline">Bitcoin Timeline</a></li>
+            <li><a href="/whitepaper">The Whitepaper</a></li>
+            <li><a href="/faq">FAQ</a></li>
             <li><a href="/blog/">Blog</a></li>
-      <li><a href="news.html">News</a></li>
-            <li><a href="price.html">BTC Price</a></li>
+      <li><a href="/news">News</a></li>
+            <li><a href="/price">BTC Price</a></li>
           </ul>
         </div>
         <div class="footer-links">
-          <h5>Legal</h5>
+          <h5>About this resource</h5><a href="/editorial">Sources &amp; editorial policy</a>
           <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-disclaimer">
@@ -192,63 +192,10 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 WhoInventedBitcoin.com — Educational Resource</p>
+        <p>&copy; 2026 WhoInventedBitcoin.com — Educational Resource</p>
       </div>
     </div>
   </footer>
-  <script src="main.js"></script>
-<!-- =====================================================
-     BLOG WIDGET — paste this into any page just before </body>
-     It will show the 3 latest blog posts automatically.
-     ===================================================== -->
+  <script src="/main.js"></script>
 
-<!-- LATEST BLOG POSTS SECTION -->
-<section class="section section--dark" id="blog-widget-section" style="display:none;">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">From The Blog</span>
-      <h2>Latest Articles</h2>
-      <p>Deep dives into Bitcoin history, Satoshi's mystery, and the world of cryptocurrency.</p>
-    </div>
-    <div class="card-grid" id="blog-widget-grid"></div>
-    <div style="text-align:center; margin-top:2.5rem;">
-      <a href="/blog/" class="btn-ghost">View All Posts <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-  </div>
-</section>
-
-<script>
-(async function() {
-  try {
-    const res   = await fetch('/blog/api.php?limit=3');
-    const data  = await res.json();
-    const posts = data.posts || [];
-    if (!posts.length) return;
-
-    const grid = document.getElementById('blog-widget-grid');
-    grid.innerHTML = posts.map(p => `
-      <a href="/blog/${p.slug}" class="card">
-        <div class="card-icon"><i class="fa-solid fa-pen-to-square"></i></div>
-        <h3>${escHtml(p.title)}</h3>
-        ${p.excerpt ? `<p>${escHtml(p.excerpt.substring(0, 120))}…</p>` : ''}
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1.2rem;">
-          <span class="card-link">Read Article →</span>
-          <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted);">${formatDate(p.published_at)}</span>
-        </div>
-      </a>
-    `).join('');
-
-    document.getElementById('blog-widget-section').style.display = 'block';
-  } catch(e) {}
-
-  function escHtml(s) {
-    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
-  function formatDate(d) {
-    return new Date(d).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
-  }
-})();
-</script>
-
-</body>
-</html>
+</body></html>

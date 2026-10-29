@@ -661,7 +661,7 @@ body {
   .sticky-sidebar { position: static; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
-@media (max-width: 680px) {
+@media (max-width: 1000px) {
   .hamburger { display: flex; }
   .nav-links {
     display: none; flex-direction: column;
@@ -699,7 +699,7 @@ body {
     color: var(--orange);
   }
   .nav-links a::before {
-    content: //; font-family: var(--font-mono);
+    content: '//'; font-family: var(--font-mono);
     font-size: 0.65rem; color: var(--orange);
     opacity: 0.4; margin-right: 0.6rem; letter-spacing: 0.05em;
   }
@@ -719,3 +719,50 @@ body {
   .stat-divider { display: none; }
   .price-meta { gap: 1.5rem; }
 }
+
+/* Evidence pages: retain the original palette with clearer reading contrast. */
+:root { --text-secondary:#b1a79e; --text-muted:#a0968d; }
+a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-visible { outline:2px solid var(--orange); outline-offset:5px; }
+.skip-link { position:fixed;left:1rem;top:-5rem;z-index:1500;background:var(--orange);color:#090909;padding:.6rem 1rem; }
+.skip-link:focus { top:1rem; }
+.reading-page { padding:2rem 0 5rem; }
+.reading-page>.container { max-width:1120px; }
+.breadcrumb { font: .8rem var(--font-mono);color:var(--text-muted);margin:1rem 0 3rem; }
+.breadcrumb a,.review-date a,.source-box a,.fact-item a,.reading-page a:not(.card):not(.btn-primary),.section-tail a { color:var(--orange-light); }
+.reading-header { max-width:850px;border-bottom:1px solid var(--border-bright);padding-bottom:2rem;margin-bottom:2.5rem; }
+.reading-header h1 { font-family:var(--font-display);font-size:clamp(2.3rem,5.5vw,4.4rem);line-height:1.08;margin:.7rem 0 1.2rem; }
+.reading-deck { color:var(--text-secondary);font-size:1.2rem;max-width:70ch; }
+.review-date { font-family:var(--font-mono);font-size:.78rem;color:var(--text-muted);margin:1.2rem 0; }
+.reading-page .prose { max-width:760px;margin-bottom:3rem; }
+.reading-page h2 { font-family:var(--font-display);font-size:2rem;line-height:1.2;margin:2rem 0 1rem; }
+.reading-page .prose p { margin-bottom:1.2rem;line-height:1.85; }
+.reading-page .prose li { margin-bottom:.8rem; }
+.reading-page .prose ul,.source-box ol { padding-left:1.4rem; }
+.source-box { margin:3rem 0;padding:1.4rem 1.6rem;background:var(--bg-card);border:1px solid var(--border-bright);border-left:3px solid var(--orange);overflow-wrap:anywhere; }
+.source-box h2 { margin-top:0; }
+.source-box li { margin:.6rem 0; }
+.source-box p { font-size:.9rem;margin-top:1rem; }
+.evidence-verdict { display:flex;gap:1.5rem;align-items:center;padding:1.5rem;border:1px solid var(--border-bright);background:var(--bg-card);margin-bottom:2rem;max-width:760px; }
+.dossier-mark { display:grid;place-items:center;flex-shrink:0;width:65px;height:65px;font:700 2rem var(--font-display);color:var(--orange);border:1px solid var(--orange); }
+.evidence-verdict p { font-family:var(--font-display);font-size:1.3rem; }
+.evidence-cards .section-tag { font-size:.68rem;line-height:1.5;display:block;min-height:2.2rem; }
+.card h3 { margin:.7rem 0; }
+.card-grid { align-items:stretch; }
+.card { display:flex;flex-direction:column; }
+.card .card-link { margin-top:auto;padding-top:1rem; }
+.section-tail { margin-top:2rem;text-align:center; }
+.table-scroll { width:100%;overflow:auto;border:1px solid var(--border-bright);margin:1.5rem 0 3rem; }
+.evidence-table { width:100%;border-collapse:collapse;min-width:650px;text-align:left; }
+.evidence-table th,.evidence-table td { padding:1rem;border-bottom:1px solid var(--border);vertical-align:top; }
+.evidence-table th { font-family:var(--font-display);font-size:1.1rem; }
+.evidence-table thead { background:var(--bg-card); }
+.evidence-table td { font-size:.95rem;color:var(--text-secondary); }
+.next-clue { border-top:1px solid var(--border-bright);margin-top:2rem;padding-top:1rem; }
+.clue-details { margin-top:1rem;padding:1rem;border:1px solid var(--border-bright); }
+.clue-details summary { cursor:pointer;color:var(--orange);font-family:var(--font-mono); }
+.clue-details[open] summary { margin-bottom:1rem; }
+.text-button { background:transparent;border:0;color:var(--orange-light);text-decoration:underline;cursor:pointer;font:inherit; }
+#home-btc-price { overflow-wrap:anywhere; }
+@media(max-width:600px) { .reading-page { padding-top:.8rem; } .reading-page>.container { padding:0 20px; } .breadcrumb { margin-bottom:2rem; } .source-box { padding:1rem; } .evidence-verdict { gap:1rem;padding:1rem; } .dossier-mark { width:48px;height:48px; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation:none!important;transition:none!important; } }
+[id] { scroll-margin-top:84px; }

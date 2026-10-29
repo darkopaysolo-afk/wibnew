@@ -1,102 +1,56 @@
-// =============================================
-//  WHO INVENTED BITCOIN — main.js
-// =============================================
-
-// Mobile nav toggle
-function toggleMenu() {
+'use strict';
+function setMenu(open, restoreFocus = false) {
   const nav = document.getElementById('navLinks');
   const btn = document.querySelector('.hamburger');
-  const isOpen = nav.classList.toggle('open');
-  btn.classList.toggle('is-open', isOpen);
-  btn.innerHTML = isOpen ? '✕' : '&#9776;';
-  document.body.style.overflow = isOpen ? 'hidden' : '';
+  if (!nav || !btn) return;
+  nav.classList.toggle('open', open);
+  btn.classList.toggle('is-open', open);
+  btn.setAttribute('aria-expanded', String(open));
+  btn.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  btn.textContent = open ? '✕' : '☰';
+  document.body.style.overflow = open ? 'hidden' : '';
+  if (restoreFocus) btn.focus();
 }
-
-// Close menu when clicking outside
-document.addEventListener('click', function(e) {
+function toggleMenu() { setMenu(!document.getElementById('navLinks')?.classList.contains('open')); }
+document.addEventListener('click', event => {
   const nav = document.getElementById('navLinks');
   const btn = document.querySelector('.hamburger');
-  if (nav && nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
-    nav.classList.remove('open');
-    btn.classList.remove('is-open');
-    btn.innerHTML = '&#9776;';
-    document.body.style.overflow = '';
-  }
-});
-
-// Close on escape key
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    const nav = document.getElementById('navLinks');
-    const btn = document.querySelector('.hamburger');
-    if (nav && nav.classList.contains('open')) {
-      nav.classList.remove('open');
-      btn.classList.remove('is-open');
-      btn.innerHTML = '&#9776;';
-      document.body.style.overflow = '';
-    }
-  }
-});
-
-// Close mobile menu when a link is clicked
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      const nav = document.getElementById('navLinks');
-      const btn = document.querySelector('.hamburger');
-      nav.classList.remove('open');
-      if (btn) { btn.classList.remove('is-open'); btn.innerHTML = '&#9776;'; }
-      document.body.style.overflow = '';
-    });
-  });
-
-  // Animate elements on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.card, .fact-item, .suspect-card, .timeline-item, .wp-section, .faq-item, .news-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
+  if (nav?.classList.contains('open') && !nav.contains(event.target) && !btn?.contains(event.target)) setMenu(false);
+  if (event.target.closest('#navLinks a')) setMenu(false);
+  const link = event.target.closest('a[href]');
+  if (!link || typeof window.gtag !== 'function') return;
+  const url = new URL(link.href, location.href);
+  if (!/^https?:$/.test(url.protocol)) return;
+  const internal = url.origin === location.origin;
+  window.gtag('event', internal ? 'explore_content' : 'source_click', {
+    content_path: internal ? url.pathname : undefined,
+    link_domain: internal ? undefined : url.hostname,
+    source_page: location.pathname,
+    transport_type: 'beacon'
   });
 });
-
-// FAQ accordion
+document.addEventListener('keydown', event => {
+  const nav = document.getElementById('navLinks');
+  const btn = document.querySelector('.hamburger');
+  if (!nav?.classList.contains('open')) return;
+  if (event.key === 'Escape') setMenu(false, true);
+  if (event.key === 'Tab') {
+    const links = Array.from(nav.querySelectorAll('a[href]'));
+    const last = links[links.length - 1];
+    if (event.shiftKey && document.activeElement === btn) { event.preventDefault(); last?.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); btn?.focus(); }
+  }
+});
+window.matchMedia('(min-width: 1001px)').addEventListener('change', event => { if (event.matches) setMenu(false); });
 function toggleFaq(btn) {
-  const answer = btn.nextElementSibling;
-  const isOpen = answer.classList.contains('open');
-  // Close all
-  document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
-  document.querySelectorAll('.faq-question').forEach(b => b.classList.remove('open'));
-  // Open clicked if it was closed
-  if (!isOpen) {
-    answer.classList.add('open');
-    btn.classList.add('open');
-  }
+  const open = !btn.nextElementSibling.classList.contains('open');
+  document.querySelectorAll('.faq-answer').forEach(answer => answer.classList.remove('open'));
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.classList.remove('open'); question.setAttribute('aria-expanded', 'false');
+  });
+  btn.nextElementSibling.classList.toggle('open', open);
+  btn.classList.toggle('open', open);
+  btn.setAttribute('aria-expanded', String(open));
 }
-
-// Typed effect for hero (homepage only)
-const heroTitle = document.querySelector('.glow-text');
-if (heroTitle) {
-  const text = heroTitle.textContent;
-  heroTitle.textContent = '';
-  heroTitle.style.borderRight = '2px solid var(--orange)';
-  let i = 0;
-  const type = () => {
-    if (i < text.length) {
-      heroTitle.textContent += text[i++];
-      setTimeout(type, 80);
-    } else {
-      setTimeout(() => { heroTitle.style.borderRight = 'none'; }, 600);
-    }
-  };
-  setTimeout(type, 600);
-}
+document.querySelectorAll('.faq-question').forEach(btn => btn.setAttribute('aria-expanded', 'false'));
+// Headlines and cards remain visible immediately, including with reduced motion or blocked scripts.

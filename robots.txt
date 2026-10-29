@@ -1,5 +1,3 @@
 User-agent: *
-Disallow: /admin/
-Disallow: /data/
-
+Allow: /
 Sitemap: https://www.whoinventedbitcoin.com/sitemap.xml
